@@ -17,7 +17,16 @@ while j < 0:
     # print(ran)
     if start < 500:
         print("把钱冲够了再来玩吧！穷鬼！！！")
-        break
+        m = int(input("赶紧输入要充值的金额，我可没时间等你:"))
+        while True:
+            if m < 1000:
+                print("充值金额不能少于1000，给我重新输！！！")
+                m = int(input("快点！！！:"))
+            else:
+                break
+        start = int((start + m) * (1 + m * 0.0001))
+        print("资金剩余：", start)
+        # break
     else:
         if a == "1":
             i = 0
